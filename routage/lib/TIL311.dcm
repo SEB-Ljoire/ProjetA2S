@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TIL311
+D LED Displays & Accessories Hexadecimal Display 4-bit
+K
+F https://eagle.componentsearchengine.com/Datasheets/1/TIL311.pdf
+$ENDCMP
+#
+#End Doc Library
