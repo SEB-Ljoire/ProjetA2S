@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "AT28C64B-15PU")(type "KiCad")(uri "C:/Users/ljoire/OneDrive - Groupe SEB/Bureau/ESME_A2S/projet/routage/lib/AT28C64B-15PU.pretty")(options "")(descr ""))
+  (lib (name "lib")(type "KiCad")(uri "C:/Users/ljoire/OneDrive - Groupe SEB/Bureau/ESME_A2S/projet/routage/lib.pretty")(options "")(descr ""))
+)

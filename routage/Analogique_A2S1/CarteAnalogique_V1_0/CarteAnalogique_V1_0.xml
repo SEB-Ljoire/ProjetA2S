@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\routage\Analogique_A2S1\CarteAnalogique_V1_0\CarteAnalogique_V1_0.kicad_sch</source>
+    <date>16/12/2023 19:00:12</date>
+    <tool>Eeschema (6.0.6)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Carte Analogique capteur de température </title>
+        <company>ESME</company>
+        <rev>0</rev>
+        <date>2023-12-12</date>
+        <source>CarteAnalogique_V1_0.kicad_sch</source>
+        <comment number="1" value="12_12_2023 : Création du schéma"/>
+        <comment number="2" value="15_12_2023 : Fin de la saisie début du routage"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0,33 uF</value>
+      <footprint>Capacitor_THT:CP_Axial_L18.0mm_D8.0mm_P25.00mm_Horizontal</footprint>
+      <libsource lib="Device" part="C_Polarized_US" description="Polarized capacitor, US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fad0201-6df4-43d1-84aa-045682b86393</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0,33 uF</value>
+      <footprint>Capacitor_THT:CP_Axial_L18.0mm_D8.0mm_P25.00mm_Horizontal</footprint>
+      <libsource lib="Device" part="C_Polarized_US" description="Polarized capacitor, US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee4ac81e-dd78-4726-8d1a-360f968b384e</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>150pF</value>
+      <footprint>Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P10.00mm_Horizontal</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e275fbd-6e21-457e-bf18-619dfbde4912</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>DIODE</value>
+      <footprint>Diode_THT:D_A-405_P12.70mm_Horizontal</footprint>
+      <libsource lib="pspice" part="DIODE" description="Diode symbol for simulation only. Pin order incompatible with official kicad footprints"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>91ee3b7b-cef5-49ca-b001-86e339af73c6</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D8.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>352c24f7-c883-44d7-9491-d02ea7e40c73</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Barrel_Jack</value>
+      <footprint>Connector_BarrelJack:BarrelJack_CLIFF_FC681465S_SMT_Horizontal</footprint>
+      <libsource lib="Connector" part="Barrel_Jack" description="DC Barrel Jack"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57043b5d-8eb7-4b99-bbb6-5829adb233ef</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>90K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0918_L18.0mm_D9.0mm_P25.40mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>78815e58-e1b1-4dcd-bc4b-68a5fcf24390</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0918_L18.0mm_D9.0mm_P25.40mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b6f430b-1b32-4822-9df7-17ce1e0949ed</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0918_L18.0mm_D9.0mm_P25.40mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>728eb0d0-4303-4555-b53e-a015353211aa</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0918_L18.0mm_D9.0mm_P25.40mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>65ec78cc-6a9e-49fe-9f5f-bed4423daff9</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push_Dual_x2</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm_H13mm</footprint>
+      <libsource lib="Switch" part="SW_Push_Dual_x2" description="Push button switch, generic, separate symbols, four pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8a57dc6-fc37-44cd-a471-98c4d01557da</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>LM7805_TO220</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</datasheet>
+      <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>37d6acb4-0b87-45c6-838d-e087f56ae413</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>MCP602</value>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf</datasheet>
+      <libsource lib="Amplifier_Operational" part="MCP602" description="Dual 2.7V to 6.0V Single Supply CMOS Op Amps, DIP-8/SOIC-8/TSSOP-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e8ab18c-dd52-432a-a291-c9d65c9fc754 5ff606a8-05d7-46f6-82e0-bdf2c1246dd1</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>LM35-LP</value>
+      <footprint>Package_TO_SOT_THT:TO-92</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm35.pdf</datasheet>
+      <libsource lib="Sensor_Temperature" part="LM35-LP" description="Precision centigrade temperature sensor, TO-92"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb5d4a16-b750-4073-b805-86d1c586530f</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>ADC0801LCN</value>
+      <footprint>ADC0801LCN:DIP254P762X508-20</footprint>
+      <fields>
+        <field name="Availability">In Stock</field>
+        <field name="Check_prices">https://www.snapeda.com/parts/ADC0801LCN/NOPB/Texas+Instruments/view-part/?ref=eda</field>
+        <field name="DESCRIPTION">A/D converters</field>
+        <field name="Description">
+8 Bit Analog to Digital Converter 1 Input 1 SAR 20-PDIP
+</field>
+        <field name="MF">Texas Instruments</field>
+        <field name="MP">ADC0801LCN/NOPB</field>
+        <field name="MPN">ADC0801LCN</field>
+        <field name="OC_FARNELL">-</field>
+        <field name="OC_NEWARK">41K1419</field>
+        <field name="PACKAGE">DIP-20</field>
+        <field name="Package">DIP-20 Texas Instruments</field>
+        <field name="Price">None</field>
+        <field name="Purchase-URL">https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=141130&amp;manufacturer=Texas Instruments&amp;part_name=ADC0801LCN/NOPB&amp;search_term=adc0801</field>
+        <field name="SUPPLIER">NationalSemiconductor</field>
+        <field name="SnapEDA_Link">https://www.snapeda.com/parts/ADC0801LCN/NOPB/Texas+Instruments/view-part/?ref=snap</field>
+      </fields>
+      <libsource lib="ADC0801LCN" part="ADC0801LCN" description=""/>
+      <property name="MF" value="Texas Instruments"/>
+      <property name="DESCRIPTION" value="A/D converters"/>
+      <property name="PACKAGE" value="DIP-20"/>
+      <property name="MPN" value="ADC0801LCN"/>
+      <property name="Price" value="None"/>
+      <property name="Package" value="DIP-20 Texas Instruments"/>
+      <property name="Check_prices" value="https://www.snapeda.com/parts/ADC0801LCN/NOPB/Texas+Instruments/view-part/?ref=eda"/>
+      <property name="OC_FARNELL" value="-"/>
+      <property name="SnapEDA_Link" value="https://www.snapeda.com/parts/ADC0801LCN/NOPB/Texas+Instruments/view-part/?ref=snap"/>
+      <property name="MP" value="ADC0801LCN/NOPB"/>
+      <property name="Purchase-URL" value="https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=141130&amp;manufacturer=Texas Instruments&amp;part_name=ADC0801LCN/NOPB&amp;search_term=adc0801"/>
+      <property name="SUPPLIER" value="NationalSemiconductor"/>
+      <property name="OC_NEWARK" value="41K1419"/>
+      <property name="Availability" value="In Stock"/>
+      <property name="Description" value="&#xA;8 Bit Analog to Digital Converter 1 Input 1 SAR 20-PDIP&#xA;"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c281318b-e10b-4ede-a540-99ef2043819c</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>AT28C64B-15PU</value>
+      <footprint>Package_DIP:DIP-28_W15.24mm</footprint>
+      <fields>
+        <field name="Availability">In Stock</field>
+        <field name="Check_prices">https://www.snapeda.com/parts/AT28C64B-15PU/Microchip/view-part/?ref=eda</field>
+        <field name="Description">
+AT28C64B-15PU Parallel EEPROM Memory, 64kbit, 150ns, 4.5 to 5.5 V 28-Pin PDIP | Microchip Technology Inc. AT28C64B-15PU
+</field>
+        <field name="MANUFACTURER">Microchip Technology</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.826 mm</field>
+        <field name="MF">Microchip</field>
+        <field name="MP">AT28C64B-15PU</field>
+        <field name="PARTREV">B</field>
+        <field name="Package">DIP-28 Atmel</field>
+        <field name="Price">None</field>
+        <field name="Purchase-URL">https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=290407&amp;manufacturer=Microchip&amp;part_name=AT28C64B-15PU&amp;search_term=None</field>
+        <field name="STANDARD">IPC 7351B</field>
+        <field name="SnapEDA_Link">https://www.snapeda.com/parts/AT28C64B-15PU/Microchip/view-part/?ref=snap</field>
+      </fields>
+      <libsource lib="AT28C64B-15PU" part="AT28C64B-15PU" description=""/>
+      <property name="MF" value="Microchip"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="4.826 mm"/>
+      <property name="Package" value="DIP-28 Atmel"/>
+      <property name="Price" value="None"/>
+      <property name="Check_prices" value="https://www.snapeda.com/parts/AT28C64B-15PU/Microchip/view-part/?ref=eda"/>
+      <property name="STANDARD" value="IPC 7351B"/>
+      <property name="PARTREV" value="B"/>
+      <property name="SnapEDA_Link" value="https://www.snapeda.com/parts/AT28C64B-15PU/Microchip/view-part/?ref=snap"/>
+      <property name="MP" value="AT28C64B-15PU"/>
+      <property name="Purchase-URL" value="https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=290407&amp;manufacturer=Microchip&amp;part_name=AT28C64B-15PU&amp;search_term=None"/>
+      <property name="Description" value="&#xA;AT28C64B-15PU Parallel EEPROM Memory, 64kbit, 150ns, 4.5 to 5.5 V 28-Pin PDIP | Microchip Technology Inc. AT28C64B-15PU&#xA;"/>
+      <property name="Availability" value="In Stock"/>
+      <property name="MANUFACTURER" value="Microchip Technology"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ea2485a-15e5-4f02-bc8c-710cbd19cea4</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>TIL311</value>
+      <footprint>lib:TIL311</footprint>
+      <fields>
+        <field name="Datasheet_1">https://eagle.componentsearchengine.com/Datasheets/1/TIL311.pdf</field>
+        <field name="Footprint_1">TIL311</field>
+        <field name="Height">3.6</field>
+        <field name="Manufacturer_Name">ams</field>
+        <field name="Manufacturer_Part_Number">TIL311</field>
+        <field name="Mouser Part Number">N/A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/ams/TIL311?qs=z4U2ITk9h2K7MJJ9y%252Bw8vQ%3D%3D</field>
+        <field name="Reference_1">IC</field>
+        <field name="Value_1">TIL311</field>
+      </fields>
+      <libsource lib="TIL311" part="TIL311" description="LED Displays &amp; Accessories Hexadecimal Display 4-bit"/>
+      <property name="Reference_1" value="IC"/>
+      <property name="Value_1" value="TIL311"/>
+      <property name="Footprint_1" value="TIL311"/>
+      <property name="Datasheet_1" value="https://eagle.componentsearchengine.com/Datasheets/1/TIL311.pdf"/>
+      <property name="Height" value="3.6"/>
+      <property name="Mouser Part Number" value="N/A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/ams/TIL311?qs=z4U2ITk9h2K7MJJ9y%252Bw8vQ%3D%3D"/>
+      <property name="Manufacturer_Name" value="ams"/>
+      <property name="Manufacturer_Part_Number" value="TIL311"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50fc6373-4154-4728-b765-bdf2053d1fc0</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>TIL311</value>
+      <footprint>lib:TIL311</footprint>
+      <fields>
+        <field name="Datasheet_1">https://eagle.componentsearchengine.com/Datasheets/1/TIL311.pdf</field>
+        <field name="Footprint_1">TIL311</field>
+        <field name="Height">3.6</field>
+        <field name="Manufacturer_Name">ams</field>
+        <field name="Manufacturer_Part_Number">TIL311</field>
+        <field name="Mouser Part Number">N/A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/ams/TIL311?qs=z4U2ITk9h2K7MJJ9y%252Bw8vQ%3D%3D</field>
+        <field name="Reference_1">IC</field>
+        <field name="Value_1">TIL311</field>
+      </fields>
+      <libsource lib="TIL311" part="TIL311" description="LED Displays &amp; Accessories Hexadecimal Display 4-bit"/>
+      <property name="Reference_1" value="IC"/>
+      <property name="Value_1" value="TIL311"/>
+      <property name="Footprint_1" value="TIL311"/>
+      <property name="Datasheet_1" value="https://eagle.componentsearchengine.com/Datasheets/1/TIL311.pdf"/>
+      <property name="Height" value="3.6"/>
+      <property name="Mouser Part Number" value="N/A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/ams/TIL311?qs=z4U2ITk9h2K7MJJ9y%252Bw8vQ%3D%3D"/>
+      <property name="Manufacturer_Name" value="ams"/>
+      <property name="Manufacturer_Part_Number" value="TIL311"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CarteAnalogique_V1_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59bd144d-0d44-4a79-8615-6232dac88836</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="ADC0801LCN" part="ADC0801LCN">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADC0801LCN</field>
+        <field name="Footprint">ADC0801LCN:DIP254P762X508-20</field>
+        <field name="MF">Texas Instruments</field>
+        <field name="DESCRIPTION">A/D converters</field>
+        <field name="PACKAGE">DIP-20</field>
+        <field name="MPN">ADC0801LCN</field>
+        <field name="Price">None</field>
+        <field name="Package">DIP-20 Texas Instruments</field>
+        <field name="Check_prices">https://www.snapeda.com/parts/ADC0801LCN/NOPB/Texas+Instruments/view-part/?ref=eda</field>
+        <field name="OC_FARNELL">-</field>
+        <field name="SnapEDA_Link">https://www.snapeda.com/parts/ADC0801LCN/NOPB/Texas+Instruments/view-part/?ref=snap</field>
+        <field name="MP">ADC0801LCN/NOPB</field>
+        <field name="Purchase-URL">https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=141130&amp;manufacturer=Texas Instruments&amp;part_name=ADC0801LCN/NOPB&amp;search_term=adc0801</field>
+        <field name="SUPPLIER">NationalSemiconductor</field>
+        <field name="OC_NEWARK">41K1419</field>
+        <field name="Availability">In Stock</field>
+        <field name="Description">
+8 Bit Analog to Digital Converter 1 Input 1 SAR 20-PDIP
+</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~CS" type="input"/>
+        <pin num="2" name="~RD" type="input"/>
+        <pin num="3" name="~WR" type="input"/>
+        <pin num="4" name="CLKIN" type="input"/>
+        <pin num="5" name="~INTR" type="output"/>
+        <pin num="6" name="VIN+" type="power_in"/>
+        <pin num="7" name="VIN-" type="power_in"/>
+        <pin num="8" name="AGND" type="passive"/>
+        <pin num="9" name="VREF/2" type="power_in"/>
+        <pin num="10" name="DGND" type="passive"/>
+        <pin num="11" name="DB7" type="output"/>
+        <pin num="12" name="DB6" type="output"/>
+        <pin num="13" name="DB5" type="output"/>
+        <pin num="14" name="DB4" type="output"/>
+        <pin num="15" name="DB3" type="output"/>
+        <pin num="16" name="DB2" type="output"/>
+        <pin num="17" name="DB1" type="output"/>
+        <pin num="18" name="DB0" type="output"/>
+        <pin num="19" name="CLKR" type="input"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="AT28C64B-15PU" part="AT28C64B-15PU">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AT28C64B-15PU</field>
+        <field name="Footprint">AT28C64B-15PU:DIP1555W45P254L3733H482Q28</field>
+        <field name="MF">Microchip</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.826 mm</field>
+        <field name="Package">DIP-28 Atmel</field>
+        <field name="Price">None</field>
+        <field name="Check_prices">https://www.snapeda.com/parts/AT28C64B-15PU/Microchip/view-part/?ref=eda</field>
+        <field name="STANDARD">IPC 7351B</field>
+        <field name="PARTREV">B</field>
+        <field name="SnapEDA_Link">https://www.snapeda.com/parts/AT28C64B-15PU/Microchip/view-part/?ref=snap</field>
+        <field name="MP">AT28C64B-15PU</field>
+        <field name="Purchase-URL">https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=290407&amp;manufacturer=Microchip&amp;part_name=AT28C64B-15PU&amp;search_term=None</field>
+        <field name="Description">
+AT28C64B-15PU Parallel EEPROM Memory, 64kbit, 150ns, 4.5 to 5.5 V 28-Pin PDIP | Microchip Technology Inc. AT28C64B-15PU
+</field>
+        <field name="Availability">In Stock</field>
+        <field name="MANUFACTURER">Microchip Technology</field>
+      </fields>
+      <pins>
+        <pin num="2" name="A12" type="input"/>
+        <pin num="3" name="A7" type="input"/>
+        <pin num="4" name="A6" type="input"/>
+        <pin num="5" name="A5" type="input"/>
+        <pin num="6" name="A4" type="input"/>
+        <pin num="7" name="A3" type="input"/>
+        <pin num="8" name="A2" type="input"/>
+        <pin num="9" name="A1" type="input"/>
+        <pin num="10" name="A0" type="input"/>
+        <pin num="11" name="I/O0" type="bidirectional"/>
+        <pin num="12" name="I/O1" type="bidirectional"/>
+        <pin num="13" name="I/O2" type="bidirectional"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="I/O3" type="bidirectional"/>
+        <pin num="16" name="I/O4" type="bidirectional"/>
+        <pin num="17" name="I/O5" type="bidirectional"/>
+        <pin num="18" name="I/O6" type="bidirectional"/>
+        <pin num="19" name="I/O7" type="bidirectional"/>
+        <pin num="20" name="~{CE}" type="input"/>
+        <pin num="21" name="A10" type="input"/>
+        <pin num="22" name="~{OE}" type="input"/>
+        <pin num="23" name="A11" type="input"/>
+        <pin num="24" name="A9" type="input"/>
+        <pin num="25" name="A8" type="input"/>
+        <pin num="27" name="~{WE}" type="input"/>
+        <pin num="28" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Amplifier_Operational" part="MCP602">
+      <description>Dual 2.7V to 6.0V Single Supply CMOS Op Amps, DIP-8/SOIC-8/TSSOP-8</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TO*99*</fp>
+        <fp>OnSemi*Micro8*</fp>
+        <fp>TSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.65mm*</fp>
+        <fp>SSOP*3.9x4.9mm*P0.635mm*</fp>
+        <fp>LFCSP*2x2mm*P0.5mm*</fp>
+        <fp>*SIP*</fp>
+        <fp>SOIC*5.3x6.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP602</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Barrel_Jack">
+      <description>DC Barrel Jack</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized_US">
+      <description>Polarized capacitor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM7805_TO220">
+      <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
+      <docs>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805_TO220</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Temperature" part="LM35-LP">
+      <description>Precision centigrade temperature sensor, TO-92</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm35.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM35-LP</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm35.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+VS" type="power_in"/>
+        <pin num="2" name="Vout" type="output"/>
+        <pin num="3" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push_Dual_x2">
+      <description>Push button switch, generic, separate symbols, four pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push_Dual_x2</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="passive"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+        <pin num="4" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TIL311" part="TIL311">
+      <description>LED Displays &amp; Accessories Hexadecimal Display 4-bit</description>
+      <fields>
+        <field name="Value">TIL311</field>
+        <field name="Reference_1">IC</field>
+        <field name="Value_1">TIL311</field>
+        <field name="Footprint_1">TIL311</field>
+        <field name="Datasheet_1">https://eagle.componentsearchengine.com/Datasheets/1/TIL311.pdf</field>
+        <field name="Height">3.6</field>
+        <field name="Mouser Part Number">N/A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/ams/TIL311?qs=z4U2ITk9h2K7MJJ9y%252Bw8vQ%3D%3D</field>
+        <field name="Manufacturer_Name">ams</field>
+        <field name="Manufacturer_Part_Number">TIL311</field>
+      </fields>
+      <pins>
+        <pin num="1" name="LED_SUPPLY" type="passive"/>
+        <pin num="2" name="DATA_INPUT_B" type="passive"/>
+        <pin num="3" name="DATA_INPUT_A" type="passive"/>
+        <pin num="4" name="LEFT_DECIMAL" type="passive"/>
+        <pin num="5" name="STROBE_INPUT" type="passive"/>
+        <pin num="7" name="GROUND" type="passive"/>
+        <pin num="8" name="BLANKING_INPUT" type="passive"/>
+        <pin num="10" name="RIGHT_DECIMAL_" type="passive"/>
+        <pin num="12" name="DATA_INPUT_D" type="passive"/>
+        <pin num="13" name="DATA_INPUT_C" type="passive"/>
+        <pin num="14" name="LOGIC_SUPPLY" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="DIODE">
+      <description>Diode symbol for simulation only. Pin order incompatible with official kicad footprints</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODE</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="input"/>
+        <pin num="2" name="A" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="ADC0801LCN">
+      <uri>C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\routage\lib\ADC0801LCN.kicad_sym</uri>
+    </library>
+    <library logical="AT28C64B-15PU">
+      <uri>C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\routage\lib\AT28C64B-15PU\AT28C64B-15PU.kicad_sym</uri>
+    </library>
+    <library logical="Amplifier_Operational">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Amplifier_Operational.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Temperature">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Sensor_Temperature.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="TIL311">
+      <uri>C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\routage\lib\TIL311.kicad_sym</uri>
+    </library>
+    <library logical="pspice">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/pspice.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VO" pintype="power_out"/>
+      <node ref="U2" pin="8" pinfunction="V+" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="+VS" pintype="power_in"/>
+      <node ref="U4" pin="20" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U5" pin="28" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U6" pin="1" pinfunction="LED_SUPPLY" pintype="passive"/>
+      <node ref="U6" pin="14" pinfunction="LOGIC_SUPPLY" pintype="passive"/>
+      <node ref="U7" pin="1" pinfunction="LED_SUPPLY" pintype="passive"/>
+      <node ref="U7" pin="14" pinfunction="LOGIC_SUPPLY" pintype="passive"/>
+    </net>
+    <net code="2" name="B0">
+      <node ref="U5" pin="11" pinfunction="I/O0" pintype="bidirectional"/>
+      <node ref="U6" pin="3" pinfunction="DATA_INPUT_A" pintype="passive"/>
+    </net>
+    <net code="3" name="B1">
+      <node ref="U5" pin="12" pinfunction="I/O1" pintype="bidirectional"/>
+      <node ref="U6" pin="2" pinfunction="DATA_INPUT_B" pintype="passive"/>
+    </net>
+    <net code="4" name="B2">
+      <node ref="U5" pin="13" pinfunction="I/O2" pintype="bidirectional"/>
+      <node ref="U6" pin="12" pinfunction="DATA_INPUT_D" pintype="passive"/>
+    </net>
+    <net code="5" name="B3">
+      <node ref="U5" pin="15" pinfunction="I/O3" pintype="bidirectional"/>
+      <node ref="U6" pin="13" pinfunction="DATA_INPUT_C" pintype="passive"/>
+    </net>
+    <net code="6" name="B4">
+      <node ref="U5" pin="16" pinfunction="I/O4" pintype="bidirectional"/>
+      <node ref="U7" pin="3" pinfunction="DATA_INPUT_A" pintype="passive"/>
+    </net>
+    <net code="7" name="B5">
+      <node ref="U5" pin="17" pinfunction="I/O5" pintype="bidirectional"/>
+      <node ref="U7" pin="2" pinfunction="DATA_INPUT_B" pintype="passive"/>
+    </net>
+    <net code="8" name="B6">
+      <node ref="U5" pin="18" pinfunction="I/O6" pintype="bidirectional"/>
+      <node ref="U7" pin="13" pinfunction="DATA_INPUT_C" pintype="passive"/>
+    </net>
+    <net code="9" name="B7">
+      <node ref="U5" pin="19" pinfunction="I/O7" pintype="bidirectional"/>
+      <node ref="U7" pin="12" pinfunction="DATA_INPUT_D" pintype="passive"/>
+    </net>
+    <net code="10" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="D" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="V-" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="~CS" pintype="input"/>
+      <node ref="U4" pin="10" pinfunction="DGND" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="~RD" pintype="input"/>
+      <node ref="U4" pin="7" pinfunction="VIN-" pintype="power_in"/>
+      <node ref="U4" pin="8" pinfunction="AGND" pintype="passive"/>
+      <node ref="U5" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="A12" pintype="input"/>
+      <node ref="U5" pin="20" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U5" pin="21" pinfunction="A10" pintype="input"/>
+      <node ref="U5" pin="22" pinfunction="~{OE}" pintype="input"/>
+      <node ref="U5" pin="23" pinfunction="A11" pintype="input"/>
+      <node ref="U5" pin="24" pinfunction="A9" pintype="input"/>
+      <node ref="U5" pin="25" pinfunction="A8" pintype="input"/>
+      <node ref="U5" pin="27" pinfunction="~{WE}" pintype="input"/>
+      <node ref="U6" pin="10" pinfunction="RIGHT_DECIMAL_" pintype="passive"/>
+      <node ref="U6" pin="4" pinfunction="LEFT_DECIMAL" pintype="passive"/>
+      <node ref="U6" pin="5" pinfunction="STROBE_INPUT" pintype="passive"/>
+      <node ref="U6" pin="7" pinfunction="GROUND" pintype="passive"/>
+      <node ref="U6" pin="8" pinfunction="BLANKING_INPUT" pintype="passive"/>
+      <node ref="U7" pin="10" pinfunction="RIGHT_DECIMAL_" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="LEFT_DECIMAL" pintype="passive"/>
+      <node ref="U7" pin="5" pinfunction="STROBE_INPUT" pintype="passive"/>
+      <node ref="U7" pin="7" pinfunction="GROUND" pintype="passive"/>
+      <node ref="U7" pin="8" pinfunction="BLANKING_INPUT" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="input"/>
+      <node ref="U1" pin="1" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="12" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(J1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="input"/>
+      <node ref="J1" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(U2-Pad3)">
+      <node ref="U2" pin="3" pinfunction="+" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="Vout" pintype="output"/>
+    </net>
+    <net code="16" name="Net-(U4-Pad3)">
+      <node ref="SW1" pin="1" pinfunction="C" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="~WR" pintype="input"/>
+      <node ref="U4" pin="5" pinfunction="~INTR" pintype="output"/>
+    </net>
+    <net code="17" name="Net-(U4-Pad4)">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="CLKIN" pintype="input"/>
+    </net>
+    <net code="18" name="Net-(U4-Pad11)">
+      <node ref="U4" pin="11" pinfunction="DB7" pintype="output"/>
+      <node ref="U5" pin="3" pinfunction="A7" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(U4-Pad12)">
+      <node ref="U4" pin="12" pinfunction="DB6" pintype="output"/>
+      <node ref="U5" pin="4" pinfunction="A6" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(U4-Pad13)">
+      <node ref="U4" pin="13" pinfunction="DB5" pintype="output"/>
+      <node ref="U5" pin="5" pinfunction="A5" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(U4-Pad14)">
+      <node ref="U4" pin="14" pinfunction="DB4" pintype="output"/>
+      <node ref="U5" pin="6" pinfunction="A4" pintype="input"/>
+    </net>
+    <net code="22" name="Net-(U4-Pad15)">
+      <node ref="U4" pin="15" pinfunction="DB3" pintype="output"/>
+      <node ref="U5" pin="7" pinfunction="A3" pintype="input"/>
+    </net>
+    <net code="23" name="Net-(U4-Pad16)">
+      <node ref="U4" pin="16" pinfunction="DB2" pintype="output"/>
+      <node ref="U5" pin="8" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="24" name="Net-(U4-Pad17)">
+      <node ref="U4" pin="17" pinfunction="DB1" pintype="output"/>
+      <node ref="U5" pin="9" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="25" name="Net-(U4-Pad18)">
+      <node ref="U4" pin="18" pinfunction="DB0" pintype="output"/>
+      <node ref="U5" pin="10" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="26" name="Net-(U4-Pad19)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U4" pin="19" pinfunction="CLKR" pintype="input"/>
+    </net>
+    <net code="27" name="Vcapteur">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U2" pin="1" pintype="output"/>
+      <node ref="U4" pin="6" pinfunction="VIN+" pintype="power_in"/>
+    </net>
+    <net code="28" name="unconnected-(U4-Pad9)">
+      <node ref="U4" pin="9" pinfunction="VREF/2" pintype="power_in"/>
+    </net>
+  </nets>
+</export>
