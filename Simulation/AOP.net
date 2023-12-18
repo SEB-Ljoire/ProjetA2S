@@ -1,0 +1,10 @@
+* C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\Simulation\AOP.asc
+XU1 LM35 N001 Vcc 0 Vs MAX4353
+V1 LM35 0 0.1
+V2 Vcc 0 5
+R1 Vs N001 56K
+R2 0 N001 10K
+.tran 200
+.lib MAX4353.lib
+.backanno
+.end
