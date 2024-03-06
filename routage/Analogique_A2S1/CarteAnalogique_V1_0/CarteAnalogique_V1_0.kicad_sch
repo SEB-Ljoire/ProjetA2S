@@ -1170,7 +1170,6 @@
     )
   )
 
-
   (junction (at 222.25 72.39) (diameter 0) (color 0 0 0 0)
     (uuid 0362eb49-a549-43d1-9b77-83dae21b201e)
   )
@@ -2111,7 +2110,7 @@
     (in_bom yes) (on_board yes)
     (uuid 65ec78cc-6a9e-49fe-9f5f-bed4423daff9)
     (property "Reference" "R4" (id 0) (at 91.44 71.12 0))
-    (property "Value" "10K" (id 1) (at 91.44 73.66 0))
+    (property "Value" "300" (id 1) (at 91.44 73.66 0))
     (property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical" (id 2) (at 84.582 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2173,7 +2172,7 @@
     (in_bom yes) (on_board yes)
     (uuid 78815e58-e1b1-4dcd-bc4b-68a5fcf24390)
     (property "Reference" "R1" (id 0) (at 80.01 121.92 90))
-    (property "Value" "90K" (id 1) (at 80.01 127 90))
+    (property "Value" "56K" (id 1) (at 80.01 127 90))
     (property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical" (id 2) (at 80.01 122.682 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2566,7 +2565,7 @@
     (property "Reference" "C2" (id 0) (at 77.47 73.0249 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0,33 uF" (id 1) (at 77.47 75.5649 0)
+    (property "Value" "0,1 uF" (id 1) (at 77.47 75.5649 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm" (id 2) (at 73.66 74.93 0)
@@ -2723,7 +2722,7 @@
       (reference "C1") (unit 1) (value "0,33 uF") (footprint "Capacitor_THT:CP_Radial_D7.5mm_P2.50mm")
     )
     (path "/ee4ac81e-dd78-4726-8d1a-360f968b384e"
-      (reference "C2") (unit 1) (value "0,33 uF") (footprint "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm")
+      (reference "C2") (unit 1) (value "0,1 uF") (footprint "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm")
     )
     (path "/8e275fbd-6e21-457e-bf18-619dfbde4912"
       (reference "C3") (unit 1) (value "150pF") (footprint "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P10.00mm_Horizontal")
@@ -2738,7 +2737,7 @@
       (reference "J1") (unit 1) (value "Barrel_Jack") (footprint "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal")
     )
     (path "/78815e58-e1b1-4dcd-bc4b-68a5fcf24390"
-      (reference "R1") (unit 1) (value "90K") (footprint "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical")
+      (reference "R1") (unit 1) (value "56K") (footprint "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical")
     )
     (path "/1b6f430b-1b32-4822-9df7-17ce1e0949ed"
       (reference "R2") (unit 1) (value "10K") (footprint "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical")
@@ -2747,7 +2746,7 @@
       (reference "R3") (unit 1) (value "10K") (footprint "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical")
     )
     (path "/65ec78cc-6a9e-49fe-9f5f-bed4423daff9"
-      (reference "R4") (unit 1) (value "10K") (footprint "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical")
+      (reference "R4") (unit 1) (value "300") (footprint "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical")
     )
     (path "/f8a57dc6-fc37-44cd-a471-98c4d01557da"
       (reference "SW1") (unit 1) (value "SW_Push_Dual_x2") (footprint "Button_Switch_THT:SW_PUSH_6mm_H13mm")
