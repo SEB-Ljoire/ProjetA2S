@@ -1,5 +1,0 @@
-(sym_lib_table
-  (lib (name "ADC0801LCN")(type "KiCad")(uri "C:/Users/ljoire/OneDrive - Groupe SEB/Bureau/ESME_A2S/projet/routage/lib/ADC0801LCN.kicad_sym")(options "")(descr ""))
-  (lib (name "AT28C64B-15PU")(type "KiCad")(uri "C:/Users/ljoire/OneDrive - Groupe SEB/Bureau/ESME_A2S/projet/routage/lib/AT28C64B-15PU/AT28C64B-15PU.kicad_sym")(options "")(descr ""))
-  (lib (name "TIL311")(type "KiCad")(uri "C:/Users/ljoire/OneDrive - Groupe SEB/Bureau/ESME_A2S/projet/routage/lib/TIL311.kicad_sym")(options "")(descr ""))
-)
