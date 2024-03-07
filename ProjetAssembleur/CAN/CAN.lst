@@ -1,4 +1,4 @@
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  1
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00028 ;------------------------------------------------------------------------------------------------*
                       00029 ;                                                                                                       
                                                                                                              *
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  2
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00060 
                       00061 ;*************************************************************************************************
                       00062 ;                                                                                                       
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  3
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -144,11 +144,11 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0001   1683           00077         BSF  STATUS,RP0
 0002   1703           00078         BSF     STATUS,RP1
                       00079 ;Mise de la valeur de ADCON0
-0003   3049           00080         MOVLW 0x49
+0003   3041           00080         MOVLW 0x41;mise sur RA0 pour la conversion
 0004   009F           00081         MOVWF ADCON0
                       00082 ;******************* CONFIG DE ADCON 1*******************************
                       00083 ;Mise de la valeur de ADCON1
-0005   3001           00084         MOVLW 0x01
+0005   300E           00084         MOVLW 0x0E
                       00085 ;aller en bank1
 0006   1683           00086         BSF  STATUS,RP0
 0007   1303           00087         BCF     STATUS,RP1
@@ -173,7 +173,7 @@ Warning[202]: Argument out of range.  Least significant bits used.
 0011   280E           00103         GOTO EndConversion
                       00104 
                       00105         END 
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  4
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  4
 
 
 SYMBOL TABLE
@@ -232,7 +232,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  5
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  5
 
 
 SYMBOL TABLE
@@ -291,7 +291,7 @@ IRP                               00000007
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
 NOT_BO                            00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  6
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  6
 
 
 SYMBOL TABLE
@@ -350,7 +350,7 @@ RB6                               00000006
 RB7                               00000007
 RBIE                              00000003
 RBIF                              00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  7
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  7
 
 
 SYMBOL TABLE
@@ -409,7 +409,7 @@ T0SE                              00000004
 T1CKPS0                           00000004
 T1CKPS1                           00000005
 T1CON                             00000010
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  8
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  8
 
 
 SYMBOL TABLE
@@ -468,7 +468,7 @@ TRMT                              00000001
 TX8_9                             00000006
 TX9                               00000006
 TX9D                              00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  9
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  9
 
 
 SYMBOL TABLE
@@ -526,7 +526,7 @@ _WRT_OFF                          00003FFF
 _XT_OSC                           00003FFD
 __16F876A                         00000001
 __DEBUG                           1
-MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE 10
+MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE 10
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)

@@ -77,11 +77,11 @@ PROG_PRINCIPAL
 	BSF  STATUS,RP0
 	BSF	STATUS,RP1
 ;Mise de la valeur de ADCON0
-	MOVLW 0x49
+	MOVLW 0x41;mise sur RA0 pour la conversion
 	MOVWF ADCON0
 ;******************* CONFIG DE ADCON 1*******************************
 ;Mise de la valeur de ADCON1
-	MOVLW 0x01
+	MOVLW 0x0E
 ;aller en bank1
 	BSF  STATUS,RP0
 	BCF	STATUS,RP1
