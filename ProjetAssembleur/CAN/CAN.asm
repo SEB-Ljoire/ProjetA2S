@@ -88,7 +88,7 @@ PROG_PRINCIPAL
 	MOVWF ADCON1
 ;TRISC en sortie
 	MOVLW 0x00
-	MOVWF TRISB
+	MOVWF TRISC
 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
 ;aller en bank0	
 	BCF  STATUS,RP0
@@ -99,7 +99,7 @@ EndConversion
 	BTFSC ADCON0,5
 	GOTO EndConversion
 ;Déplacement du résultat de la conversion au port C
-	MOVF ADRESH,PORTB
+	MOVF ADRESH,PORTC
 	GOTO EndConversion
 
 	END 

@@ -1,4 +1,4 @@
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  1
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00028 ;------------------------------------------------------------------------------------------------*
                       00029 ;                                                                                                       
                                                                                                              *
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  2
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00060 
                       00061 ;*************************************************************************************************
                       00062 ;                                                                                                       
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  3
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -157,7 +157,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00089 ;TRISC en sortie
 0009   3000           00090         MOVLW 0x00
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000A   0086           00091         MOVWF TRISB
+000A   0087           00091         MOVWF TRISC
                       00092 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
                       00093 ;aller en bank0 
 000B   1283           00094         BCF  STATUS,RP0
@@ -169,11 +169,11 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 000F   280E           00100         GOTO EndConversion
                       00101 ;Déplacement du résultat de la conversion au port C
 Warning[202]: Argument out of range.  Least significant bits used.
-0010   081E           00102         MOVF ADRESH,PORTB
+0010   089E           00102         MOVF ADRESH,PORTC
 0011   280E           00103         GOTO EndConversion
                       00104 
                       00105         END 
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  4
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  4
 
 
 SYMBOL TABLE
@@ -232,7 +232,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  5
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  5
 
 
 SYMBOL TABLE
@@ -291,7 +291,7 @@ IRP                               00000007
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
 NOT_BO                            00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  6
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  6
 
 
 SYMBOL TABLE
@@ -350,7 +350,7 @@ RB6                               00000006
 RB7                               00000007
 RBIE                              00000003
 RBIF                              00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  7
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  7
 
 
 SYMBOL TABLE
@@ -409,7 +409,7 @@ T0SE                              00000004
 T1CKPS0                           00000004
 T1CKPS1                           00000005
 T1CON                             00000010
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  8
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  8
 
 
 SYMBOL TABLE
@@ -468,7 +468,7 @@ TRMT                              00000001
 TX8_9                             00000006
 TX9                               00000006
 TX9D                              00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE  9
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE  9
 
 
 SYMBOL TABLE
@@ -526,7 +526,7 @@ _WRT_OFF                          00003FFF
 _XT_OSC                           00003FFD
 __16F876A                         00000001
 __DEBUG                           1
-MPASM  5.51                           CAN.ASM   3-7-2024  10:34:32         PAGE 10
+MPASM  5.51                           CAN.ASM   3-7-2024  10:55:51         PAGE 10
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
