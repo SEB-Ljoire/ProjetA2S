@@ -1,0 +1,38 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Tue Mar 05 13:08:07 2024
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x00001c
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000d      
+            14 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   BOUCLE   0x000004    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+                   DELAIS   0x000009    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+              DELAIS_LOOP   0x00000b    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+           PROG_PRINCIPAL   0x000001    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+           PROG_PRINCIPAL   0x000001    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+                   BOUCLE   0x000004    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+                   DELAIS   0x000009    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+              DELAIS_LOOP   0x00000b    program     static C:\Users\ljoire\OneDrive - Groupe SEB\Bureau\ESME_A2S\projet\ProjetAssembleur\Gaby.asm
+
+
