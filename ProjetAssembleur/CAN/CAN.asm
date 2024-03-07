@@ -43,12 +43,9 @@
 
 	
 
-	List p=16F877A					;indique le pic utilisé. Mettre la référence du PIC utilisé
-	Include "p16F877A.inc"			;indique le fichier de congfiguration du pic
-	ADresult EQU 0x20				;Variable stockant le resultat
-	ConfigADcon0 EQU 0x21			;Variable de config ADCON0
-	ConfigADcon1 EQU 0x22			;;Variable de config ADCON1
-	ConvertLaunch EQU 0x23			;Pareil que ADCON0 mais avec un go bit
+	List p=16F876A					;indique le pic utilisé. Mettre la référence du PIC utilisé
+	Include "p16F876A.inc"			;indique le fichier de congfiguration du pic
+
 ;*************************************************************************************************
 ;							     				    	                                         *	
 ;							Vecteur de démarage aprés RESET 	                                 *
@@ -75,19 +72,34 @@
 
 
 PROG_PRINCIPAL
-
+;******************* CONFIG DE ADCON 0*******************************
+;aller en bank0	
+	BSF  STATUS,RP0
+	BSF	STATUS,RP1
+;Mise de la valeur de ADCON0
+	MOVLW 0x49
+	MOVWF ADCON0
+;******************* CONFIG DE ADCON 1*******************************
+;Mise de la valeur de ADCON1
+	MOVLW 0x01
+;aller en bank1
 	BSF  STATUS,RP0
 	BCF	STATUS,RP1
-
-	BCF	TRISC,0
+	MOVWF ADCON1
+;TRISC en sortie
+	MOVLW 0x00
+	MOVWF TRISB
+;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
+;aller en bank0	
 	BCF  STATUS,RP0
-BOUCLE	
-	BSF		PORTC,0
-	NOP
-	BCF		PORTC,RP1
-	NOP
-	GOTO BOUCLE	
+	BCF	STATUS,RP1
+;Lancement conversion et attente de la fin de la conversion 
+	BSF ADCON0,5
+EndConversion
+	BTFSC ADCON0,5
+	GOTO EndConversion
+;Déplacement du résultat de la conversion au port C
+	MOVF ADRESH,PORTB
+	GOTO EndConversion
 
-
-
-END 
+	END 
