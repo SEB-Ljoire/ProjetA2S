@@ -32,7 +32,7 @@
 ;Trinôme :                                                                                       *
 ;                                                                                                *
 ;*************************************************************************************************
-		CPT   EQU	H'20'
+CPT   EQU	H'20'
     
 
     List p=16F876A              ; Spécifie le type de PIC utilisé pour le compilateur
@@ -70,20 +70,20 @@ PROG_PRINCIPAL
     BCF  STATUS,RP0            ; Retour à la banque de registres 0 pour les opérations normales
 
 BOUCLE   
-    BSF  PORTC,0               ; Met le bit 0 du port C à l'état haut (allume la LED/connecté à RC0)
-    CALL DELAIS                ; Appelle la routine de délai pour contrôler la durée de l'état haut
-    BCF  PORTC,0               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
-    CALL DELAIS                ; Appelle à nouveau la routine de délai pour contrôler la durée de l'état bas
-    GOTO BOUCLE                ; Boucle indéfiniment, générant ainsi un signal carré
-
-; Routine de délai simple (Ajustez le délai en modifiant le contenu de la boucle)
-DELAIS
-    MOVLW D'255'               ; Charge le registre W avec la valeur 255 (base du délai)
-	MOVWF		CPT
+    BSF  PORTC,0
+    MOVLW D'255'
+	MOVWF		CPT   ; Met le bit 0 du port C à l'état haut (allume la LED/connecté à RC0)
 DELAIS_LOOP
     DECFSZ		CPT,1                   ; Décrémente la valeur dans W
                 ; Vérifie si le bit Zéro (Z) du registre STATUS est actif (W=0)
     GOTO DELAIS_LOOP           ; Si W n'est pas encore 0, continue la boucle
-    RETURN                     ; Retourne de la routine de délai quand W atteint 0
+    BCF  PORTC,0               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
+    MOVLW D'255'               ; Charge le registre W avec la valeur 255 (base du délai)
+	MOVWF		CPT                ; Appelle à nouveau la routine de délai pour contrôler la durée de l'état bas
+DELAIS_LOOP2
+    DECFSZ		CPT,1                   ; Décrémente la valeur dans W
+                ; Vérifie si le bit Zéro (Z) du registre STATUS est actif (W=0)
+    GOTO DELAIS_LOOP2           ; Si W n'est pas encore 0, continue la boucle               ; Boucle indéfiniment, générant ainsi un signal carré
+	GOTO BOUCLE
 
 END                             ; Indique la fin du programme
