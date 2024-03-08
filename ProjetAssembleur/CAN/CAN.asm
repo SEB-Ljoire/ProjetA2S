@@ -77,29 +77,33 @@ PROG_PRINCIPAL
 	BSF  STATUS,RP0
 	BSF	STATUS,RP1
 ;Mise de la valeur de ADCON0
-	MOVLW 0x41;mise sur RA0 pour la conversion
+	MOVLW 0b01000101;mise sur RA0 pour la conversion
 	MOVWF ADCON0
+	nop
 ;******************* CONFIG DE ADCON 1*******************************
 ;Mise de la valeur de ADCON1
-	MOVLW 0x0E
+	MOVLW 0b00001110
 ;aller en bank1
 	BSF  STATUS,RP0
 	BCF	STATUS,RP1
 	MOVWF ADCON1
 ;TRISC en sortie
-	MOVLW 0x00
+	MOVLW 0b00000000
 	MOVWF TRISC
+	MOVLW 0b11111111
 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
 ;aller en bank0	
 	BCF  STATUS,RP0
 	BCF	STATUS,RP1
 ;Lancement conversion et attente de la fin de la conversion 
-	BSF ADCON0,5
+ConversionBegin
+	BSF ADCON0,2
 EndConversion
-	BTFSC ADCON0,5
-	GOTO EndConversion
+	BTFSC ADCON0,2
+;	GOTO EndConversion
 ;Déplacement du résultat de la conversion au port C
-	MOVF ADRESH,PORTC
-	GOTO EndConversion
+	MOVF ADRESH,W
+	MOVWF PORTC
+	GOTO ConversionBegin 
 
 	END 

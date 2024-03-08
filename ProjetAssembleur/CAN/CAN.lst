@@ -1,4 +1,4 @@
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  1
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00028 ;------------------------------------------------------------------------------------------------*
                       00029 ;                                                                                                       
                                                                                                              *
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  2
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00060 
                       00061 ;*************************************************************************************************
                       00062 ;                                                                                                       
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  3
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -144,36 +144,45 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0001   1683           00077         BSF  STATUS,RP0
 0002   1703           00078         BSF     STATUS,RP1
                       00079 ;Mise de la valeur de ADCON0
-0003   3041           00080         MOVLW 0x41;mise sur RA0 pour la conversion
+0003   3045           00080         MOVLW 0x45;mise sur RA0 pour la conversion
 0004   009F           00081         MOVWF ADCON0
-                      00082 ;******************* CONFIG DE ADCON 1*******************************
-                      00083 ;Mise de la valeur de ADCON1
-0005   300E           00084         MOVLW 0x0E
-                      00085 ;aller en bank1
-0006   1683           00086         BSF  STATUS,RP0
-0007   1303           00087         BCF     STATUS,RP1
+0005   0000           00082         nop
+                      00083 ;******************* CONFIG DE ADCON 1*******************************
+                      00084 ;Mise de la valeur de ADCON1
+0006   300E           00085         MOVLW 0x0E
+                      00086 ;aller en bank1
+0007   1683           00087         BSF  STATUS,RP0
+0008   1303           00088         BCF     STATUS,RP1
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0008   009F           00088         MOVWF ADCON1
-                      00089 ;TRISC en sortie
-0009   3000           00090         MOVLW 0x00
+0009   009F           00089         MOVWF ADCON1
+                      00090 ;TRISC en sortie
+000A   3000           00091         MOVLW 0x00
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000A   0087           00091         MOVWF TRISC
-                      00092 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
-                      00093 ;aller en bank0 
-000B   1283           00094         BCF  STATUS,RP0
-000C   1303           00095         BCF     STATUS,RP1
-                      00096 ;Lancement conversion et attente de la fin de la conversion 
-000D   169F           00097         BSF ADCON0,5
-000E                  00098 EndConversion
-000E   1A9F           00099         BTFSC ADCON0,5
-000F   280E           00100         GOTO EndConversion
-                      00101 ;Déplacement du résultat de la conversion au port C
-Warning[202]: Argument out of range.  Least significant bits used.
-0010   089E           00102         MOVF ADRESH,PORTC
-0011   280E           00103         GOTO EndConversion
-                      00104 
-                      00105         END 
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  4
+000B   0087           00092         MOVWF TRISC
+000C   30FF           00093         MOVLW 0xFF
+                      00094 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
+                      00095 ;aller en bank0 
+000D   1283           00096         BCF  STATUS,RP0
+000E   1303           00097         BCF     STATUS,RP1
+                      00098 ;Lancement conversion et attente de la fin de la conversion 
+000F                  00099 ConversionBegin
+000F   151F           00100         BSF ADCON0,2
+0010                  00101 EndConversion
+0010   191F           00102         BTFSC ADCON0,2
+                      00103 ;       GOTO EndConversion
+                      00104 ;Déplacement du résultat de la conversion au port C
+0011   081E           00105         MOVF ADRESH,W
+0012   0087           00106         MOVWF PORTC
+0013   280F           00107         GOTO ConversionBegin 
+                      00108 
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00109         END 
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  5
 
 
 SYMBOL TABLE
@@ -232,7 +241,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  5
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  6
 
 
 SYMBOL TABLE
@@ -255,6 +264,7 @@ CVRCON                            0000009D
 CVREN                             00000007
 CVROE                             00000006
 CVRR                              00000005
+ConversionBegin                   0000000F
 D                                 00000005
 DATA_ADDRESS                      00000005
 DC                                00000001
@@ -269,7 +279,7 @@ EEDATH                            0000010E
 EEIE                              00000004
 EEIF                              00000004
 EEPGD                             00000007
-EndConversion                     0000000E
+EndConversion                     00000010
 F                                 00000001
 FERR                              00000002
 FSR                               00000004
@@ -290,13 +300,13 @@ INTF                              00000001
 IRP                               00000007
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
-NOT_BO                            00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  6
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  7
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+NOT_BO                            00000000
 NOT_BOR                           00000000
 NOT_DONE                          00000002
 NOT_PD                            00000003
@@ -349,13 +359,13 @@ RB5                               00000005
 RB6                               00000006
 RB7                               00000007
 RBIE                              00000003
-RBIF                              00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  7
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  8
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+RBIF                              00000000
 RC0                               00000000
 RC1                               00000001
 RC2                               00000002
@@ -408,13 +418,13 @@ T0IF                              00000002
 T0SE                              00000004
 T1CKPS0                           00000004
 T1CKPS1                           00000005
-T1CON                             00000010
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  8
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  9
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+T1CON                             00000010
 T1INSYNC                          00000002
 T1OSCEN                           00000003
 T1SYNC                            00000002
@@ -467,13 +477,13 @@ TRISC7                            00000007
 TRMT                              00000001
 TX8_9                             00000006
 TX9                               00000006
-TX9D                              00000000
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE  9
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TX9D                              00000000
 TXD8                              00000000
 TXEN                              00000005
 TXIE                              00000004
@@ -526,22 +536,22 @@ _WRT_OFF                          00003FFF
 _XT_OSC                           00003FFD
 __16F876A                         00000001
 __DEBUG                           1
-MPASM  5.51                           CAN.ASM   3-7-2024  18:07:55         PAGE 10
+MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE 11
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
 
-0000 : XXXXXXXXXXXXXXXX XX-------------- ---------------- ----------------
+0000 : XXXXXXXXXXXXXXXX XXXX------------ ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Words Used:    18
-Program Memory Words Free:  8174
+Program Memory Words Used:    20
+Program Memory Words Free:  8172
 
 
 Errors   :     0
-Warnings :     1 reported,     0 suppressed
+Warnings :     0 reported,     0 suppressed
 Messages :     2 reported,     0 suppressed
 
 
