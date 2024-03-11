@@ -16,9 +16,13 @@
   )
 
 
-  (text "Partie 1\nPartie 2" (at 34.925 62.865 0)
+  (text "Partie 1\nPartie 2\nPartie 3" (at 36.195 61.595 0)
     (effects (font (size 6 6)) (justify left bottom))
     (uuid 2a703efe-b0d5-45fe-aa32-376785cb79f8)
+  )
+  (text "Partie 4" (at 85.09 43.18 0)
+    (effects (font (size 6 6)) (justify left bottom))
+    (uuid c2b0df1c-8e58-4e78-b4dc-eccd7c02d496)
   )
 
   (sheet (at 34.925 27.305) (size 38.735 36.195) (fields_autoplaced)
@@ -34,6 +38,23 @@
     (instances
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 84.455 26.67) (size 45.085 38.1) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid f96553f1-7057-4c76-8116-2836507ab568)
+    (property "Sheetname" "testLCD" (at 84.455 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "testLCD.kicad_sch" (at 84.455 65.3546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Numerique_A2S2"
+        (path "/c9018090-be6b-47c3-acdf-7658c7cb0715" (page "3"))
       )
     )
   )
