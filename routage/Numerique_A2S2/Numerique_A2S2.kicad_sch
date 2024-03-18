@@ -20,7 +20,7 @@
     (effects (font (size 6 6)) (justify left bottom))
     (uuid 2a703efe-b0d5-45fe-aa32-376785cb79f8)
   )
-  (text "Partie 4" (at 85.09 43.18 0)
+  (text "Partie 4\nPartie 5\nPartie 6" (at 86.36 57.15 0)
     (effects (font (size 6 6)) (justify left bottom))
     (uuid c2b0df1c-8e58-4e78-b4dc-eccd7c02d496)
   )

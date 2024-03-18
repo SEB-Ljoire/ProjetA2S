@@ -1846,6 +1846,11 @@
     )
     (pin "1" (uuid 7c6380c1-3d01-4ec0-b447-214d1e77b610))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR015") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR015") (unit 1)
@@ -1876,6 +1881,11 @@
     (pin "1" (uuid e5863e78-33af-46d7-a5d0-bec89e21b761))
     (pin "3" (uuid 3b4b5dd0-25e0-46bd-b20f-e223278953e2))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "J4") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "J4") (unit 1)
@@ -1901,6 +1911,11 @@
     )
     (pin "1" (uuid 0310a471-946f-4bec-8926-da58414160fd))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR018") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR018") (unit 1)
@@ -1926,6 +1941,11 @@
     )
     (pin "1" (uuid 8696b00c-5ed0-4e20-aaa1-d4a3f4e0532f))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR019") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR019") (unit 1)
@@ -1952,6 +1972,11 @@
     (pin "1" (uuid ffe1668d-25f0-4cfd-9dcd-b9069a6a0621))
     (pin "2" (uuid 34b6b53f-35b4-4a9f-b9cb-79a32044755a))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "D4") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "D4") (unit 1)
@@ -1978,6 +2003,11 @@
     (pin "2" (uuid 828e12db-c940-4d5c-80dd-a1caab10bf96))
     (pin "1" (uuid 25181452-a294-496d-9f67-f51bba25503d))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "Y2") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "Y2") (unit 1)
@@ -2003,6 +2033,11 @@
     )
     (pin "1" (uuid 267b5775-742f-4b9a-840e-49a4923a4be0))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR013") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR013") (unit 1)
@@ -2029,6 +2064,11 @@
     (pin "1" (uuid 7c7d47cc-742d-445f-b2fc-b38ed86015c0))
     (pin "2" (uuid ed8617cb-c2be-4c39-8259-5ddfb81a3611))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "J3") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "J3") (unit 1)
@@ -2054,6 +2094,11 @@
     )
     (pin "1" (uuid 6fcb360f-d4b5-4bac-8486-58a4d7645773))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR020") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR020") (unit 1)
@@ -2079,6 +2124,11 @@
     )
     (pin "1" (uuid 7b4cee9c-afa0-4990-8ec6-50da9dfa15ed))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR017") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR017") (unit 1)
@@ -2119,6 +2169,11 @@
     (pin "1" (uuid b172073c-8f76-45bb-981c-9a30ea904841))
     (pin "16" (uuid b13b8cde-f073-4005-bb67-c5804b8e13d2))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "U5") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "U5") (unit 1)
@@ -2133,7 +2188,7 @@
     (property "Reference" "C7" (at 34.29 65.405 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 34.29 67.945 0)
+    (property "Value" "10p" (at 34.29 67.945 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (at 32.0802 70.485 0)
@@ -2145,6 +2200,11 @@
     (pin "2" (uuid 34726e8e-f55b-4d71-9bad-e8600e3db464))
     (pin "1" (uuid 92ff061e-58b5-4535-895b-b986da2c261a))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "C7") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "C7") (unit 1)
@@ -2177,6 +2237,11 @@
     (pin "1" (uuid 54ae04ab-5f6a-4dee-9329-a3e27effa08f))
     (pin "2" (uuid 4e57f120-2387-4a36-9c86-5ff67f1e48d7))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "D3") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "D3") (unit 1)
@@ -2202,6 +2267,11 @@
     )
     (pin "1" (uuid ad4d811b-5535-4342-b829-e3f5a82e2a5c))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR025") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR025") (unit 1)
@@ -2227,6 +2297,11 @@
     )
     (pin "1" (uuid 3649c400-28e3-47b4-b229-f14d22823d7f))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR022") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR022") (unit 1)
@@ -2253,6 +2328,11 @@
     (pin "2" (uuid c5c02d64-3b5a-47ee-a47e-7fc7a59e430c))
     (pin "1" (uuid 9dacb60b-8e8a-47c7-b114-d1d35dc016bc))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "C5") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "C5") (unit 1)
@@ -2278,6 +2358,11 @@
     )
     (pin "1" (uuid 12718adb-66e1-4c14-b8a0-5de2dd15e555))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR024") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR024") (unit 1)
@@ -2303,6 +2388,11 @@
     )
     (pin "1" (uuid a88b554f-a06f-4fe6-b490-182086516143))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR014") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR014") (unit 1)
@@ -2328,6 +2418,11 @@
     )
     (pin "1" (uuid 2dd93653-ee48-43bc-91eb-88a6005b6e74))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR012") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR012") (unit 1)
@@ -2355,6 +2450,11 @@
     (pin "2" (uuid e1a0e009-e5d9-47d1-9d4b-83b1be24b229))
     (pin "3" (uuid 50e2340f-e2bc-4d1f-b32c-583020b8f4b9))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "U3") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "U3") (unit 1)
@@ -2381,6 +2481,11 @@
     (pin "1" (uuid ba8f4451-6da4-414b-8505-4c24030a9c1b))
     (pin "2" (uuid 31f2a042-21c1-48d2-843b-4c41ed65d0d5))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "R4") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "R4") (unit 1)
@@ -2406,6 +2511,11 @@
     )
     (pin "1" (uuid 286a24eb-ad74-434c-bbf9-1a9350577286))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR023") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR023") (unit 1)
@@ -2431,6 +2541,11 @@
     )
     (pin "1" (uuid e758e552-659a-4ed5-8b3b-9f8af448a536))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR026") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR026") (unit 1)
@@ -2457,6 +2572,11 @@
     (pin "1" (uuid 100ef1fc-1933-4dd8-a454-df1bb68d86bd))
     (pin "2" (uuid d523d740-b0c8-4c1d-bd45-3e9178d4f7e4))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "R3") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "R3") (unit 1)
@@ -2483,6 +2603,11 @@
     (pin "2" (uuid 8d4eb37a-7fa5-4b42-b047-35944d93c49f))
     (pin "1" (uuid 15102b11-585a-4d17-98d0-8e600bbb95be))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "C6") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "C6") (unit 1)
@@ -2509,6 +2634,11 @@
     (pin "1" (uuid d96197ec-95d5-417b-8efa-bb5412ea9d08))
     (pin "2" (uuid 0559ecf0-1590-463d-86d5-421acfef167b))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "SW2") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "SW2") (unit 1)
@@ -2534,6 +2664,11 @@
     )
     (pin "1" (uuid ab0572f1-ab57-4628-87ce-d1275a531019))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR011") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR011") (unit 1)
@@ -2545,10 +2680,10 @@
   (symbol (lib_id "Device:C") (at 41.275 66.675 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid da913988-1dcc-4212-91ea-90f18259a642)
-    (property "Reference" "C8" (at 45.085 66.675 0)
+    (property "Reference" "C8" (at 44.45 65.405 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "~" (at 45.085 67.945 0)
+    (property "Value" "10p" (at 44.45 67.945 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (at 42.2402 70.485 0)
@@ -2560,6 +2695,11 @@
     (pin "2" (uuid d61782cf-f0fc-4345-8f18-2d1af73533f7))
     (pin "1" (uuid e818e0fd-5bf4-49a3-839f-d9e310385dda))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "C8") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "C8") (unit 1)
@@ -2612,6 +2752,11 @@
     (pin "13" (uuid 79e83a97-ca11-4b1d-833f-dd81d72fdb66))
     (pin "21" (uuid b854eed0-2db8-4179-a759-8fd794bd255f))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "U4") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "U4") (unit 1)
@@ -2637,6 +2782,11 @@
     )
     (pin "1" (uuid 093e7af6-a251-4528-ba06-e0ea736872f1))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR016") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR016") (unit 1)
@@ -2662,6 +2812,11 @@
     )
     (pin "1" (uuid 15e0c3ce-06e4-43b6-ac4e-3d6e5b50fdb1))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "#PWR021") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "#PWR021") (unit 1)
@@ -2689,11 +2844,20 @@
     (pin "1" (uuid 6e449fc3-8c50-4add-b60d-520576218444))
     (pin "2" (uuid 5b456219-d1ab-41ad-a586-54a207df0e25))
     (instances
+      (project "testLCD"
+        (path "/0ca9903f-1a51-46f3-82f1-2a6f9cd501e5"
+          (reference "RV2") (unit 1)
+        )
+      )
       (project "Numerique_A2S2"
         (path "/c9018090-be6b-47c3-acdf-7658c7cb0715/f96553f1-7057-4c76-8116-2836507ab568"
           (reference "RV2") (unit 1)
         )
       )
     )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
   )
 )
