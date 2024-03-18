@@ -1,50 +1,92 @@
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  1
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
                       00001 ;*************************************************************************************************
-                      00002 ;                                                                                                *  
-                      00003 ;                 PROGRAMME PERMETTANT DE GENERER UN SIGNAL CARRE SUR LA BROCHE....              *  
-                      00004 ;                                                                                                *
-                      00005 ;                                                                                                *  
+                      00002 ;                                                                                                       
+                                                                                                     *      
+                      00003 ;                     PROGRAMME PERMETTANT DE GENERER UN SIGNAL CARRE SUR LA BROCHE....                 
+                                 *  
+                      00004 ;                                                                                                       
+                                                                                                     *
+                      00005 ;                                                                                                       
+                                                             *      
                       00006 ;*************************************************************************************************
-                      00007 ;                                                                                                *  
-                      00008 ;                   Fichier requis : P16F877A ou P16F877 ou P16F876A ou P16F876                  *  
-                      00009 ;                                                                                                *
+                      00007 ;                                                                                                       
+                                                                                                     *      
+                      00008 ;                                       Fichier requis : P16F877A ou P16F877 ou P16F876A ou P16F876     
+                                                 *  
+                      00009 ;                                                                                                       
+                                                                                                             *
                       00010 ;------------------------------------------------------------------------------------------------*
                       00011 ;*************************************************************************************************
-                      00012 ;                                                                                                *  
-                      00013 ;Recommendations:                                                                                *
-                      00014 ;       - Tous les programmes doivent être sauvegardés avec un nom explicite                     *
-                      00015 ;       - Tous les programmes divent être dûment commentés.                                      *
-                      00016 ;       - Créer un sous répertoire pour chaque nouveau programme pour plus de clarté.            *
-                      00017 ;       Par exemples: C:Projet\PROG_PIC\Signal-carré                                             *
-                      00018 ;                                                                                                *
-                      00019 ;       - Ne pas modifier la mise en page et la taille des caractÃ¨res.                          *
-                      00020 ;       - Tous les programmes doivent avoir la même présentation (copier_coller ou sauvegarder   *
-                      00021 ;           ce fichier sous un autre nom)                                                        *
-                      00022 ;       - Ne pas oublier de respecter les champs (colonnes) :                                    *
-                      00023 ;           - Premier   : Etiquette                                                              *
-                      00024 ;           - Deuxième  : Instruction                                                            *
-                      00025 ;           - Troisième : Opérande(s)                                                            *
-                      00026 ;           - Quatrième : ;Commentaire                                                           *      
-                                                                                                    
-                      00027 ;   Les champs peuvent être séparés par un ou plusiers espaces (ou tabulation(s)                 *      
-                                                                                                         *
+                      00012 ;                                                                                                       
+                                                             *              
+                      00013 ;Recommendations:                                                                                       
+                                                             *
+                      00014 ;               - Tous les programmes doivent être sauvegardés avec un nom explicite                    
+                             *
+                      00015 ;               - Tous les programmes divent être dûment commentés.                                     
+                                             *
+                      00016 ;               - Créer un sous répertoire pour chaque nouveau programme pour plus de clarté.           
+                             *
+                      00017 ;               Par exemples: C:Projet\PROG_PIC\Signal-carré                                            
+                                             *
+                      00018 ;                                                                                                       
+                                                                                     *
+                      00019 ;               - Ne pas modifier la mise en page et la taille des caractÃ¨res.                         
+                                     *
+                      00020 ;               - Tous les programmes doivent avoir la même présentation (copier_coller ou sauvegarder  
+                             *
+                      00021 ;                       ce fichier sous un autre nom)                                                   
+                                                                         *
+                      00022 ;               - Ne pas oublier de respecter les champs (colonnes) :                                   
+                                         *
+                      00023 ;                       - Premier   : Etiquette                                                         
+                                                         *
+                      00024 ;                       - Deuxième  : Instruction                                                       
+                                                         *
+                      00025 ;                       - Troisième : Opérande(s)                                                       
+                                                         *
+                      00026 ;                       - Quatrième : ;Commentaire                                                      
+                                                         *                                                                  
+                      00027 ;       Les champs peuvent être séparés par un ou plusiers espaces (ou tabulation(s)                    
+                                     *                                                                                      
                       00028 ;------------------------------------------------------------------------------------------------*
-                      00029 ;                                                                                                *
-                      00030 ;NOM :                                                                                           *
-                      00031 ;Date :                                                                                          *
-                      00032 ;Trinôme :                                                                                       *
-                      00033 ;                                                                                                *
-                      00034 ;*************************************************************************************************
-  00000020            00035 CPT   EQU       H'20'
-                      00036     
-                      00037 
-                      00038     List p=16F876A              ; Spécifie le type de PIC utilisé pour le compilateur
-                      00039     Include "p16f876a.inc"      ; Inclut le fichier d'en-tête pour le PIC16F876A
+                      00029 ;                                                                                                       
+                                                                                                             *
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00030 ;NOM :          JOIRE RAFFOUX ANDRIANJAFINDRADILO                                                       
+                                                                                                         *
+                      00031 ;Date :         07/03/2024                                                                              
+                                                                                                     *
+                      00032 ;Trinôme :      5                                                                                       
+                                                                                             *
+                      00033 ;Ce programme a pour objectif de faire une conversion du CBN vers DCB
+                      00034 ;Etape du programme 
+                      00035 ;       0. Cree les variable et copier la fonction carré pour attendre le temp de la conversion
+                      00036 ;       1. Faire passer les CAN utilisé en entrée analogque (via ADCON 1) FCG3-0 = 0000 et le port sélec
+                            tionner en port de sortie.
+                      00037 ;       2. Convertir ADCON 0 = 0b 01 
+                      00038 ;       3. Convertir ADCON 1
+                      00039 ;       4. Traiter les 2 bit de poid faible (ajouter +1 sur adressH si il sont tous les deux à 1)
+                      00040 ;       5. Récupérer la valeur de ADRESSH dans le work                                                  
+                                                                                                     
+                      00041 ;       6. Mettre le résultat sur un prot digital
+                      00042 ;*************************************************************************************************
+                      00043 
+                      00044         
+                      00045 
+                      00046         List p=16F876A                                  ;indique le pic utilisé. Mettre la référence du 
+                            PIC utilisé
+                      00047         Include "p16F876A.inc"                  ;indique le fichier de congfiguration du pic
                       00001         LIST
                       00002 
                       00003 ;==========================================================================
@@ -54,68 +96,102 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00007 ;==========================================================================
                       00008 
                       00524         LIST
-                      00040     
-                      00041 
-                      00042 ;*************************************************************************************************
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  2
+                      00048 
+                      00049 ;*************************************************************************************************
+                      00050 ;                                                                                                       
+                                                             *      
+                      00051 ;                                                       Vecteur de démarage aprés RESET                 
+                                                     *
+                      00052 ;                                                                                                       
+                                                             *
+                      00053 ;*************************************************************************************************
+                      00054 
+                      00055 
+0000                  00056         org     0x000                                            ;Cette directive précise l'adresse à pa
+                            rtir de laquelle
+Warning[207]: Found label after column 1. (Unite)
+  00000020            00057         Unite EQU H'20'                                                         ;les instructions (progr
+                            amme) seront stockées
+Warning[207]: Found label after column 1. (Dizaine)
+  00000021            00058         Dizaine EQU H'21'
+Warning[207]: Found label after column 1. (Centaine)
+  00000022            00059     Centaine EQU H'22'
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00043 ;                                                                                                *  
-                      00044 ;                           Vecteur de démarage aprés RESET                                      *
-                      00045 ;                                                                                                *
-                      00046 ;*************************************************************************************************
-                      00047 
-                      00048 
-0000                  00049     org 0x000                        ;Cette directive précise l'adresse à partir de laquelle
-                      00050                                     ;les instructions (programme) seront stockées
-                      00051     
-0000   2801           00052     GOTO PROG_PRINCIPAL
-                      00053 
-                      00054 ;*************************************************************************************************
-                      00055 ;                                                                                                *  
-                      00056 ;                           Mettre le programme entre l'étiquett PROG-PRINCIPAL et END           *
-                      00057 ;                                                                                                *
-                      00058 ;*************************************************************************************************
-                      00059 
-                      00060 ;*************************************************************************************************
-                      00061 ;                                                                                                *  
-                      00062 ;   La déclaration de variables, les macros et autres doit être placée avant l'étiquette         *
-                      00063 ;   PROG-PRINCIPAL                                                                               *
-                      00064 ;*************************************************************************************************
-                      00065 
-                      00066 
-0001                  00067 PROG_PRINCIPAL
-0001   1683           00068     BSF  STATUS,RP0
-0002   1303           00069         BCF STATUS,RP1            ; Sélectionne le registre banque 1 pour accéder à la configuration des
-                             ports
-Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0003   0187           00070     CLRF TRISC               ; Configure le bit 0 du port C (RC0) en mode sortie
-0004   1283           00071     BCF  STATUS,RP0            ; Retour à la banque de registres 0 pour les opérations normales
-                      00072 
-0005                  00073 BOUCLE   
-0005   1407           00074     BSF  PORTC,0
-0006   30FF           00075     MOVLW D'255'
-0007   00A0           00076         MOVWF           CPT   ; Met le bit 0 du port C à l'état haut (allume la LED/connecté à RC0)
-0008                  00077 DELAIS_LOOP
-0008   0BA0           00078     DECFSZ              CPT,1                   ; Décrémente la valeur dans W
-                      00079                 ; Vérifie si le bit Zéro (Z) du registre STATUS est actif (W=0)
-0009   2808           00080     GOTO DELAIS_LOOP           ; Si W n'est pas encore 0, continue la boucle
-000A   1007           00081     BCF  PORTC,0               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
-000B   30FF           00082     MOVLW D'255'               ; Charge le registre W avec la valeur 255 (base du délai)
-000C   00A0           00083         MOVWF           CPT                ; Appelle à nouveau la routine de délai pour contrôler la dur
-                            ée de l'état bas
-000D                  00084 DELAIS_LOOP2
-000D   0BA0           00085     DECFSZ              CPT,1                   ; Décrémente la valeur dans W
-000E   280D           00086     GOTO DELAIS_LOOP2           ; Si W n'est pas encore 0, continue la boucle               ; Boucle ind
-                            éfiniment, générant ainsi un signal carré
-000F   2805           00087         GOTO BOUCLE
-                      00088 
-Warning[205]: Found directive in column 1. (END)
-                      00089 END                             ; Indique la fin du programme
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  3
+Warning[207]: Found label after column 1. (NOMBRE)
+  00000023            00060         NOMBRE EQU H'23'
+0000   2808           00061         GOTO PROG_PRINCIPAL
+                      00062 
+                      00063 ;*************************************************************************************************
+                      00064 ;                                                                                                       
+                                                             *      
+                      00065 ;                                                       Mettre le programme entre l'étiquett PROG-PRINCI
+                            PAL et END           *
+                      00066 ;                                                                                                       
+                                                             *
+                      00067 ;*************************************************************************************************
+0001                  00068 SUB10
+                      00069 
+0001   02A3           00070         SUBWF NOMBRE,1
+0002   1903           00071         BTFSC STATUS,Z
+0003   2816           00072         GOTO  FinConvertionDizaine
+0004   1C03           00073         BTFSS STATUS,C
+0005   2812           00074         GOTO FinConversionUnite
+Message[305]: Using default destination of 1 (file).
+0006   0AA1           00075         INCF Dizaine
+0007   2801           00076         GOTO SUB10
+                      00077 ;*************************************************************************************************
+                      00078 ;                                                                                                       
+                                                             *      
+                      00079 ;       La déclaration de variables, les macros et autres doit être placée avant l'étiquette         *
+                      00080 ;       PROG-PRINCIPAL                                                                                  
+                                                         *
+                      00081 ;*************************************************************************************************
+                      00082 
+                      00083 
+0008                  00084 PROG_PRINCIPAL
+                      00085 ;******************* CONFIG DE ADCON 0*******************************
+                      00086 ;aller en bank0 
+0008   1283           00087         BCF  STATUS,RP0
+0009   1303           00088         BCF     STATUS,RP1
+                      00089 ;Initialisation des Valeur des variables
+000A   3000           00090         MOVLW D'00'
+000B   00A0           00091         MOVWF Unite
+000C   00A1           00092         MOVWF Dizaine
+000D   00A2           00093         MOVWF Centaine 
+000E   301B           00094         MOVLW D'27'
+000F   00A3           00095         MOVWF NOMBRE 
+                      00096 ;Decrementation pour trouver dizaine
+0010   300A           00097         MOVLW D'10'
+0011   2801           00098         GOTO SUB10
+                      00099 
+                      00100 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
+0012                  00101 FinConversionUnite
+0012   07A3           00102         ADDWF NOMBRE,1
+0013   0823           00103         MOVF NOMBRE,W
+0014   00A0           00104         MOVWF H'20'
+0015   2818           00105         GOTO finprogramme
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00106 
+0016                  00107 FinConvertionDizaine
+0016   0AA1           00108         INCF Dizaine,1
+0017   2818           00109         GOTO finprogramme
+                      00110 
+0018                  00111 finprogramme
+Warning[203]: Found opcode in column 1. (nop)
+0018   0000           00112 nop
+                      00113 ;affichage sur le port 
+                      00114         END 
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  5
 
 
 SYMBOL TABLE
@@ -139,7 +215,6 @@ ADRESL                            0000009E
 BCLIE                             00000003
 BCLIF                             00000003
 BF                                00000000
-BOUCLE                            00000005
 BRGH                              00000002
 C                                 00000000
 C1INV                             00000004
@@ -174,13 +249,13 @@ CHS0                              00000003
 CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  4
+CKE                               00000006
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  6
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-CKE                               00000006
 CKP                               00000004
 CM0                               00000000
 CM1                               00000001
@@ -188,7 +263,6 @@ CM2                               00000002
 CMCON                             0000009C
 CMIE                              00000006
 CMIF                              00000006
-CPT                               00000020
 CREN                              00000004
 CSRC                              00000007
 CVR0                              00000000
@@ -199,13 +273,13 @@ CVRCON                            0000009D
 CVREN                             00000007
 CVROE                             00000006
 CVRR                              00000005
+Centaine                          00000022
 D                                 00000005
 DATA_ADDRESS                      00000005
 DC                                00000001
-DELAIS_LOOP                       00000008
-DELAIS_LOOP2                      0000000D
 D_A                               00000005
 D_NOT_A                           00000005
+Dizaine                           00000021
 EEADR                             0000010D
 EEADRH                            0000010F
 EECON1                            0000018C
@@ -218,6 +292,8 @@ EEPGD                             00000007
 F                                 00000001
 FERR                              00000002
 FSR                               00000004
+FinConversionUnite                00000012
+FinConvertionDizaine              00000016
 GCEN                              00000007
 GIE                               00000007
 GO                                00000002
@@ -233,12 +309,13 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IRP                               00000007
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  5
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  7
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+NOMBRE                            00000023
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
 NOT_BO                            00000000
@@ -273,7 +350,7 @@ PORTA                             00000005
 PORTB                             00000006
 PORTC                             00000007
 PR2                               00000092
-PROG_PRINCIPAL                    00000001
+PROG_PRINCIPAL                    00000008
 PS0                               00000000
 PS1                               00000001
 PS2                               00000002
@@ -291,13 +368,13 @@ RB2                               00000002
 RB3                               00000003
 RB4                               00000004
 RB5                               00000005
-RB6                               00000006
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  6
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  8
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+RB6                               00000006
 RB7                               00000007
 RBIE                              00000003
 RBIF                              00000000
@@ -346,17 +423,18 @@ SSPM3                             00000003
 SSPOV                             00000006
 SSPSTAT                           00000094
 STATUS                            00000003
+SUB10                             00000001
 SYNC                              00000004
 T0CS                              00000005
 T0IE                              00000005
-T0IF                              00000002
-T0SE                              00000004
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  7
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE  9
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+T0IF                              00000002
+T0SE                              00000004
 T1CKPS0                           00000004
 T1CKPS1                           00000005
 T1CON                             00000010
@@ -408,14 +486,14 @@ TRISC3                            00000003
 TRISC4                            00000004
 TRISC5                            00000005
 TRISC6                            00000006
-TRISC7                            00000007
-TRMT                              00000001
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  8
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TRISC7                            00000007
+TRMT                              00000001
 TX8_9                             00000006
 TX9                               00000006
 TX9D                              00000000
@@ -426,6 +504,7 @@ TXIF                              00000004
 TXREG                             00000019
 TXSTA                             00000098
 UA                                00000001
+Unite                             00000020
 W                                 00000000
 WCOL                              00000007
 WR                                00000001
@@ -466,30 +545,32 @@ _WDT_OFF                          00003FFB
 _WDT_ON                           00003FFF
 _WRT_1FOURTH                      00003BFF
 _WRT_256                          00003DFF
-_WRT_HALF                         000039FF
-_WRT_OFF                          00003FFF
-_XT_OSC                           00003FFD
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  9
+MPASM  5.51                      CBNTODCB.ASM   3-15-2024  15:32:57         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
 __16F876A                         00000001
+__DEBUG                           1
+finprogramme                      00000018
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
-0000 : XXXXXXXXXXXXXXXX ---------------- ---------------- ----------------
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXX------- ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Words Used:    16
-Program Memory Words Free:  8176
+Program Memory Words Used:    25
+Program Memory Words Free:  8167
 
 
 Errors   :     0
-Warnings :     1 reported,     0 suppressed
+Warnings :     5 reported,     0 suppressed
 Messages :     1 reported,     0 suppressed
 
 

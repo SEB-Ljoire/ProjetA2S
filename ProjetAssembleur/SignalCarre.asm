@@ -65,24 +65,24 @@ CPT   EQU	H'20'
 
 
 PROG_PRINCIPAL
-    BSF  STATUS,RP0            ; Sélectionne le registre banque 1 pour accéder à la configuration des ports
-    BCF  TRISC,0               ; Configure le bit 0 du port C (RC0) en mode sortie
+    BSF  STATUS,RP0
+	BCF STATUS,RP1            ; Sélectionne le registre banque 1 pour accéder à la configuration des ports
+    CLRF TRISB               ; Configure le bit 0 du port C (RC0) en mode sortie
     BCF  STATUS,RP0            ; Retour à la banque de registres 0 pour les opérations normales
 
 BOUCLE   
-    BSF  PORTC,0
+    BSF  PORTB,2
     MOVLW D'255'
 	MOVWF		CPT   ; Met le bit 0 du port C à l'état haut (allume la LED/connecté à RC0)
 DELAIS_LOOP
     DECFSZ		CPT,1                   ; Décrémente la valeur dans W
                 ; Vérifie si le bit Zéro (Z) du registre STATUS est actif (W=0)
     GOTO DELAIS_LOOP           ; Si W n'est pas encore 0, continue la boucle
-    BCF  PORTC,0               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
+    BCF  PORTB,2               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
     MOVLW D'255'               ; Charge le registre W avec la valeur 255 (base du délai)
 	MOVWF		CPT                ; Appelle à nouveau la routine de délai pour contrôler la durée de l'état bas
 DELAIS_LOOP2
     DECFSZ		CPT,1                   ; Décrémente la valeur dans W
-                ; Vérifie si le bit Zéro (Z) du registre STATUS est actif (W=0)
     GOTO DELAIS_LOOP2           ; Si W n'est pas encore 0, continue la boucle               ; Boucle indéfiniment, générant ainsi un signal carré
 	GOTO BOUCLE
 
