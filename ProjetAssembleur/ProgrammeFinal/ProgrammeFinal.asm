@@ -70,8 +70,10 @@ RETURN
 Config_PORTS
     BSF STATUS,RP0
     BCF STATUS,RP1
-    BCF TRISB,0
-    BCF TRISB,1
+; Mise en entree du port servant pour 
+    BCF TRISB,4 
+; Mise en sortie du port servant pour 
+    BCF TRISB,5
     CLRF TRISC
     BCF STATUS,RP0
  

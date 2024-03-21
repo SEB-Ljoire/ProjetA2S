@@ -1,4 +1,4 @@
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  1
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00028 ;------------------------------------------------------------------------------------------------*
                       00029 ;                                                                                                       
                                                                                                              *
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  2
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00060 
                       00061 ;*************************************************************************************************
                       00062 ;                                                                                                       
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  3
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -139,50 +139,43 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00072 
                       00073 
 0001                  00074 PROG_PRINCIPAL
-                      00075 ;******************* CONFIG DE ADCON 0*******************************
-                      00076 ;aller en bank0 
-0001   1683           00077         BSF  STATUS,RP0
-0002   1703           00078         BSF     STATUS,RP1
-                      00079 ;Mise de la valeur de ADCON0
-0003   3045           00080         MOVLW 0x45;mise sur RA0 pour la conversion
-0004   009F           00081         MOVWF ADCON0
-0005   0000           00082         nop
-                      00083 ;******************* CONFIG DE ADCON 1*******************************
-                      00084 ;Mise de la valeur de ADCON1
-0006   300E           00085         MOVLW 0x0E
-                      00086 ;aller en bank1
-0007   1683           00087         BSF  STATUS,RP0
-0008   1303           00088         BCF     STATUS,RP1
+                      00075 
+                      00076 ;******************* CONFIG DE ADCON 0*******************************
+                      00077 ;aller en bank0 
+0001   1283           00078         BCF  STATUS,RP0
+0002   1303           00079         BCF     STATUS,RP1
+                      00080 ;Mise de la valeur de ADCON0
+0003   3045           00081         MOVLW B'01000101';mise sur RA0 pour la conversion
+0004   009F           00082         MOVWF ADCON0
+0005   0000           00083         nop
+                      00084 ;******************* CONFIG DE ADCON 1*******************************
+                      00085 ;Mise de la valeur de ADCON1
+0006   300E           00086         MOVLW B'00001110'
+                      00087 ;aller en bank1
+0007   1683           00088         BSF  STATUS,RP0
+0008   1303           00089         BCF     STATUS,RP1
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0009   009F           00089         MOVWF ADCON1
-                      00090 ;TRISC en sortie
-000A   3000           00091         MOVLW 0x00
+0009   009F           00090         MOVWF ADCON1
+                      00091 ;TRISC en sortie
+000A   3000           00092         MOVLW b'00000000'
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000B   0087           00092         MOVWF TRISC
-000C   30FF           00093         MOVLW 0xFF
+000B   0087           00093         MOVWF TRISC
                       00094 ;******************* LANCEMENT ET ATTENTE DE LA CONVERSION*******************************
                       00095 ;aller en bank0 
-000D   1283           00096         BCF  STATUS,RP0
-000E   1303           00097         BCF     STATUS,RP1
+000C   1283           00096         BCF  STATUS,RP0
+000D   1303           00097         BCF     STATUS,RP1
                       00098 ;Lancement conversion et attente de la fin de la conversion 
-000F                  00099 ConversionBegin
-000F   151F           00100         BSF ADCON0,2
-0010                  00101 EndConversion
-0010   191F           00102         BTFSC ADCON0,2
-                      00103 ;       GOTO EndConversion
+000E                  00099 ConversionBegin
+000E   151F           00100         BSF ADCON0,2
+000F                  00101 EndConversion
+000F   191F           00102         BTFSC ADCON0,2
+0010   280F           00103         GOTO EndConversion
                       00104 ;Déplacement du résultat de la conversion au port C
 0011   081E           00105         MOVF ADRESH,W
 0012   0087           00106         MOVWF PORTC
-0013   280F           00107         GOTO ConversionBegin 
-                      00108 
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  4
-
-
-LOC  OBJECT CODE     LINE SOURCE TEXT
-  VALUE
-
-                      00109         END 
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  5
+0013   280E           00107         GOTO ConversionBegin
+                      00108         END 
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  4
 
 
 SYMBOL TABLE
@@ -241,7 +234,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  6
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  5
 
 
 SYMBOL TABLE
@@ -264,7 +257,7 @@ CVRCON                            0000009D
 CVREN                             00000007
 CVROE                             00000006
 CVRR                              00000005
-ConversionBegin                   0000000F
+ConversionBegin                   0000000E
 D                                 00000005
 DATA_ADDRESS                      00000005
 DC                                00000001
@@ -279,7 +272,7 @@ EEDATH                            0000010E
 EEIE                              00000004
 EEIF                              00000004
 EEPGD                             00000007
-EndConversion                     00000010
+EndConversion                     0000000F
 F                                 00000001
 FERR                              00000002
 FSR                               00000004
@@ -300,7 +293,7 @@ INTF                              00000001
 IRP                               00000007
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  7
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  6
 
 
 SYMBOL TABLE
@@ -359,7 +352,7 @@ RB5                               00000005
 RB6                               00000006
 RB7                               00000007
 RBIE                              00000003
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  8
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  7
 
 
 SYMBOL TABLE
@@ -418,7 +411,7 @@ T0IF                              00000002
 T0SE                              00000004
 T1CKPS0                           00000004
 T1CKPS1                           00000005
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE  9
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  8
 
 
 SYMBOL TABLE
@@ -477,7 +470,7 @@ TRISC7                            00000007
 TRMT                              00000001
 TX8_9                             00000006
 TX9                               00000006
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE 10
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE  9
 
 
 SYMBOL TABLE
@@ -536,7 +529,7 @@ _WRT_OFF                          00003FFF
 _XT_OSC                           00003FFD
 __16F876A                         00000001
 __DEBUG                           1
-MPASM  5.51                           CAN.ASM   3-8-2024  10:38:47         PAGE 11
+MPASM  5.51                           CAN.ASM   3-20-2024  13:35:29         PAGE 10
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)

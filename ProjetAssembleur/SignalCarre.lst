@@ -1,4 +1,4 @@
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  1
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00040     
                       00041 
                       00042 ;*************************************************************************************************
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  2
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -92,18 +92,18 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0002   1303           00069         BCF STATUS,RP1            ; Sélectionne le registre banque 1 pour accéder à la configuration des
                              ports
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0003   0187           00070     CLRF TRISC               ; Configure le bit 0 du port C (RC0) en mode sortie
+0003   0186           00070     CLRF TRISB               ; Configure le bit 0 du port C (RC0) en mode sortie
 0004   1283           00071     BCF  STATUS,RP0            ; Retour à la banque de registres 0 pour les opérations normales
                       00072 
 0005                  00073 BOUCLE   
-0005   1407           00074     BSF  PORTC,0
+0005   1506           00074     BSF  PORTB,2
 0006   30FF           00075     MOVLW D'255'
 0007   00A0           00076         MOVWF           CPT   ; Met le bit 0 du port C à l'état haut (allume la LED/connecté à RC0)
 0008                  00077 DELAIS_LOOP
 0008   0BA0           00078     DECFSZ              CPT,1                   ; Décrémente la valeur dans W
                       00079                 ; Vérifie si le bit Zéro (Z) du registre STATUS est actif (W=0)
 0009   2808           00080     GOTO DELAIS_LOOP           ; Si W n'est pas encore 0, continue la boucle
-000A   1007           00081     BCF  PORTC,0               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
+000A   1106           00081     BCF  PORTB,2               ; Met le bit 0 du port C à l'état bas (éteint la LED/connecté à RC0)
 000B   30FF           00082     MOVLW D'255'               ; Charge le registre W avec la valeur 255 (base du délai)
 000C   00A0           00083         MOVWF           CPT                ; Appelle à nouveau la routine de délai pour contrôler la dur
                             ée de l'état bas
@@ -115,7 +115,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00088 
 Warning[205]: Found directive in column 1. (END)
                       00089 END                             ; Indique la fin du programme
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  3
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  3
 
 
 SYMBOL TABLE
@@ -174,7 +174,7 @@ CHS0                              00000003
 CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  4
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  4
 
 
 SYMBOL TABLE
@@ -233,7 +233,7 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IRP                               00000007
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  5
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  5
 
 
 SYMBOL TABLE
@@ -292,7 +292,7 @@ RB3                               00000003
 RB4                               00000004
 RB5                               00000005
 RB6                               00000006
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  6
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  6
 
 
 SYMBOL TABLE
@@ -351,7 +351,7 @@ T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
 T0SE                              00000004
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  7
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  7
 
 
 SYMBOL TABLE
@@ -410,7 +410,7 @@ TRISC5                            00000005
 TRISC6                            00000006
 TRISC7                            00000007
 TRMT                              00000001
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  8
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  8
 
 
 SYMBOL TABLE
@@ -469,7 +469,7 @@ _WRT_256                          00003DFF
 _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FFD
-MPASM  5.51                   SIGNALCARRE.ASM   3-18-2024  15:07:45         PAGE  9
+MPASM  5.51                   SIGNALCARRE.ASM   3-20-2024  12:37:33         PAGE  9
 
 
 SYMBOL TABLE

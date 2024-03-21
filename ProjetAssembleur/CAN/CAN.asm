@@ -104,5 +104,5 @@ EndConversion
 ;Déplacement du résultat de la conversion au port C
 	MOVF ADRESH,W
 	MOVWF PORTC
-
+	GOTO ConversionBegin
 	END 
